@@ -29,19 +29,23 @@ public class Pessoa {
     }
  
    
-    // metodo para exibir dados da pessoa no console
-    public void imprimirDados(){
-     System.out.println("Nome completo: " + nomeCompleto);
-     System.out.println("Data nascimento: " + dataNasc);
-     System.out.println("Telefone: " + telefone);
-     System.out.println("CEP: " + CEP);
-     System.out.println("Matrícula: " + matricula);
-     System.out.println("Email: " + email);
-     if (tipo == 1){
-     System.out.println("Unidade acadêmica: " + unidadeAcad + "\n");
-    } else
-     System.out.println("Curso: " + curso + "\n");
-     }
- }
+
+    public void imprimirDados() {
+        System.out.println("\n" + "Nome completo: " + nomeCompleto);
+        System.out.println("Data de nascimento: " + dataNasc);
+        System.out.println("Telefone: " + telefone);
+        System.out.println("CEP: " + CEP);
+        System.out.println("Matrícula: " + matricula);
+        System.out.println("Email: " + email);
+    
+        // if que compara o tipo para exibir o valor correto
+        if (tipo == 0) {
+            System.out.println("Curso: " + curso + "\n");
+        } else { 
+            System.out.println("Unidade Acadêmica: " + unidadeAcad + "\n");
+        }
+    }
+}
+    
  
  

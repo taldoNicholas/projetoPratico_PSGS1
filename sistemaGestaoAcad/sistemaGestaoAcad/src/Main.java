@@ -52,6 +52,7 @@ public class Main {
             System.out.println("Código da disciplina: ");
             int codDisciplina = scanner.nextInt();
 
+            // next line nesta linha pois a inserção pulava nome da disciplina, pulando direto para nome do curso.
             scanner.nextLine();
 
             System.out.println("Nome da disciplina: ");

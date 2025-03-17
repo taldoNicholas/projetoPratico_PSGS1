@@ -3,8 +3,8 @@
 ## Descrição
 O projeto **Sistema de Gestão Acadêmica** foi desenvolvido para a disciplina de **Programação de Sistemas I** da **Universidade Presbiteriana Mackenzie**. Ele tem como objetivo a criação de um sistema de gestão acadêmica, permitindo a criação, registro e edição de pessoas, disciplinas e turmas (previsto para a versão final).
 ## Tecnologias Utilizadas
-- **JAVA**
-## Estrutura do Projetoa
+- **Java**
+## Estrutura do Projeto
 O projeto segue a seguinte estrutura de pastas:
 ```
 /sistemaGestaoAcad

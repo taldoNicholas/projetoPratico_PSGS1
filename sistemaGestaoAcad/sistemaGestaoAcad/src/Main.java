@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SistemaAcademico {
+public class Main {
     private static ArrayList<Pessoa> listaPessoas = new ArrayList<>();
     private static ArrayList<Disciplina> listaDisciplinas = new ArrayList<>();
 
@@ -24,6 +24,7 @@ public class SistemaAcademico {
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = sc.nextInt();
+            sc.nextLine();
 
             switch (opcao) {
                 case 1 -> cadastrarAluno(sc);
@@ -42,27 +43,34 @@ public class SistemaAcademico {
         sc.close();
     }
 
-    // ===== CADASTROS =====
-    private static void cadastrarAluno(Scanner sc) {
-        System.out.println("\n--- Cadastro de Aluno ---");
-        System.out.print("Nome completo: ");
-        String nome = sc.nextLine();
-        System.out.print("Data de nascimento: ");
-        String data = sc.nextLine();
-        System.out.print("Telefone: ");
-        String tel = sc.nextLine();
-        System.out.print("CEP: ");
-        String cep = sc.nextLine();
-        System.out.print("RA (número): ");
-        int ra = sc.nextInt();
-        sc.nextLine();
-        System.out.print("Curso: ");
-        String curso = sc.nextLine();
+    //cadastros
 
-        Aluno aluno = new Aluno(nome, data, tel, cep, ra, curso);
-        listaPessoas.add(aluno);
-        System.out.println("Aluno cadastrado com sucesso.");
-    }
+    private static void cadastrarAluno(Scanner sc) {
+    System.out.println("\n--- Cadastro de Aluno ---");
+    System.out.print("Nome completo: ");
+    String nome = sc.nextLine(); // ✅ MANTÉM esse
+
+    System.out.print("Data de nascimento: ");
+    String data = sc.nextLine();
+
+    System.out.print("Telefone: ");
+    String tel = sc.nextLine();
+
+    System.out.print("CEP: ");
+    String cep = sc.nextLine();
+
+    System.out.print("RA (número): ");
+    int ra = sc.nextInt();
+    sc.nextLine(); // ✅ MANTÉM esse aqui pra limpar o Enter
+
+    System.out.print("Curso: ");
+    String curso = sc.nextLine();
+
+    Aluno aluno = new Aluno(nome, data, tel, cep, ra, curso);
+    listaPessoas.add(aluno);
+    System.out.println("Aluno cadastrado com sucesso.");
+}
+
 
     private static void cadastrarProfessor(Scanner sc) {
         System.out.println("\n--- Cadastro de Professor ---");
